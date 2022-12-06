@@ -15,7 +15,8 @@ def select_city (list_of_cities):
         else:
             print("Awesome! Let's move on!")
             confirm_city = True
-    
+            return select_city
+        
 select_city (list_of_cities)
 
 
@@ -61,6 +62,27 @@ def select_entertainment (entertainment_options):
             confirm_entertainment = True
     
 select_entertainment (entertainment_options)
+
+print("Looks like we are almost done here. Let's confirm the details of your trip!")
+
+def confirm_trip():
+    confirm_trip = False
+    while confirm_trip == False:
+        user_input = input("Are you ready to book your trip? (y/n) ")
+        if user_input == "n":
+            print ("Let's start over")
+            select_city
+            select_transport
+            select_entertainment
+            select_restaurant
+        else:
+            print ("Great! Time to start packing!")
+        
+
+confirm_trip()
+
+
+
 
 
 
