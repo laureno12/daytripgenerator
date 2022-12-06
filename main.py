@@ -10,8 +10,7 @@ def select_city (list_of_cities):
         select_city = random.choice(list_of_cities)
         user_input = input (f"You're going to {select_city}! Do you accept? (y/n) ")
         if user_input == "n":
-            print("No worries! Let's try again!")
-            select_city
+            print("No worries! Let's try again!")    
         else:
             print("Awesome! Let's move on!")
             confirm_city = True
@@ -27,7 +26,6 @@ def select_transport (transportation_method):
         user_input = input (f"You'll be transported by {select_transport}! Do you accept? (y/n) ")
         if user_input == "n":
             print("No worries! Let's try again!")
-            select_transport
         else:
             print("Awesome! Let's move on!")
             confirm_transport = True
@@ -42,7 +40,6 @@ def select_restaurant (restaurant_options):
         user_input = input (f"You'll eat at {select_restaurant}! Do you accept? (y/n) ")
         if user_input == "n":
             print("No worries! Let's try again!")
-            select_restaurant
         else:
             print("Awesome! Let's move on!")
             confirm_restaurant = True
@@ -56,7 +53,6 @@ def select_entertainment (entertainment_options):
         user_input = input (f"You'll spend some time {select_entertainment}! Do you accept? (y/n) ")
         if user_input == "n":
             print("No worries! Let's try again!")
-            select_entertainment
         else:
             print("Awesome! Let's move on!")
             confirm_entertainment = True
@@ -77,6 +73,7 @@ def confirm_trip():
             select_restaurant
         else:
             print ("Great! Time to start packing!")
+            confirm_trip = True
         
 
 confirm_trip()
